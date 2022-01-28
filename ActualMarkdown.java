@@ -26,21 +26,22 @@ public class ActualMarkdown {
             System.out.println(closeParen); 
 */          
             //working code for image, multiple parantheses at end, missing brackets/paranthases
-            if(nextOpenBracket == 0 && nextOpenBracket < nextCloseBracket && nextCloseBracket < openParen && openParen < closeParen){
+            if(nextOpenBracket == 0 && (nextOpenBracket < nextCloseBracket) && (nextCloseBracket < openParen) && (openParen < closeParen)){
                 toReturn.add(markdown.substring(openParen + 1, closeParen)); 
                 currentIndex = 0; 
                 markdown = markdown.substring(closeParen + 1).trim() ;
             }
-            //catches any other line after the above code 
             else if(closeParen != -1){
-                currentIndex = 0; 
-                markdown = markdown.substring(closeParen + 1).trim() ;
+                currentIndex = 0;  
+                markdown = markdown.substring(closeParen + 1).trim();
             }
             //working code for file with no links 
+            /*
             else {
                 currentIndex = markdown.length(); 
                 System.out.println("here"); 
             }
+            */
             /*
             else if(nextOpenBracket > 0){
                 currentIndex = closeParen + 1;  
