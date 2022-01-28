@@ -11,19 +11,24 @@ public class ActualMarkdown {
         // the next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
-            int nextOpenBracket = markdown.indexOf("[", currentIndex);
-            int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
-            int openParen = markdown.indexOf("(", nextCloseBracket);
-            int closeParen = markdown.indexOf(")", openParen);
+            //int nextOpenBracket = markdown.indexOf("[", currentIndex);
+            //int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
+            //int openParen = markdown.indexOf("(", nextCloseBracket);
+            //int closeParen = markdown.indexOf(")", openParen);
+            int nextOpenBracket = markdown.indexOf("[");
+            int nextCloseBracket = markdown.indexOf("]");
+            int openParen = markdown.indexOf("(");
+            int closeParen = markdown.indexOf(")");            
+            //System.out.println(markdown); 
+            //System.out.print("openbracket: ");
+            //System.out.println(nextOpenBracket);             
+            //System.out.print("Closeparen: ");
+            //System.out.println(closeParen);             
 /*
             if(nextOpenBracket == -1 || nextCloseBracket == -1 || openParen == -1 || closeParen == -1){
             }
                          
-            System.out.println(markdown); 
-            System.out.print("openbracket: ");
-            System.out.println(nextOpenBracket);             
-            System.out.print("Closeparen: ");
-            System.out.println(closeParen); 
+
 */          
             //working code for image, multiple parantheses at end, missing brackets/paranthases
             if(nextOpenBracket == 0 && (nextOpenBracket < nextCloseBracket) && (nextCloseBracket < openParen) && (openParen < closeParen)){
@@ -34,6 +39,7 @@ public class ActualMarkdown {
             else if(closeParen != -1){
                 currentIndex = 0;  
                 markdown = markdown.substring(closeParen + 1).trim();
+
             }
             //working code for file with no links 
             else {
@@ -45,6 +51,7 @@ public class ActualMarkdown {
                 System.out.println(closeParen);
             }
             */
+
         }
         return toReturn;
     }
