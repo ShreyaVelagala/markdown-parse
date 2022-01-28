@@ -29,19 +29,16 @@ public class ActualMarkdown {
             if(nextOpenBracket == 0 && (nextOpenBracket < nextCloseBracket) && (nextCloseBracket < openParen) && (openParen < closeParen)){
                 toReturn.add(markdown.substring(openParen + 1, closeParen)); 
                 currentIndex = 0; 
-                markdown = markdown.substring(closeParen + 1).trim() ;
+                markdown = markdown.substring(closeParen + 1).trim();
             }
             else if(closeParen != -1){
                 currentIndex = 0;  
                 markdown = markdown.substring(closeParen + 1).trim();
             }
             //working code for file with no links 
-            /*
             else {
-                currentIndex = markdown.length(); 
-                System.out.println("here"); 
+                currentIndex = markdown.length();  
             }
-            */
             /*
             else if(nextOpenBracket > 0){
                 currentIndex = closeParen + 1;  
