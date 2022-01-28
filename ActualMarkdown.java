@@ -41,7 +41,7 @@ public class ActualMarkdown {
                 markdown = markdown.substring(closeParen + 1).trim();
 
             }
-            //working code for file with no links 
+            //working code for file with no links
             else {
                 currentIndex = markdown.length();  
             }
