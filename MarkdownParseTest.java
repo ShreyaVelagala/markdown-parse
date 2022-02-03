@@ -14,7 +14,7 @@ public class MarkdownParseTest {
     }
     @Test
     public void getLinksTest() throws IOException {
-        List<String> expected = List.of("https://something.com", "some-page.html");
+        List<String> expected = List.of("some-page.html");
         String contents = Files.readString(Path.of("test-file.md"));
         //assertEquals(List.of("https://something.com","some-page.html"), MarkdownParse.getLinks("test-file.md"));
        assertEquals(expected , ActualMarkdown.getLinks(contents));
