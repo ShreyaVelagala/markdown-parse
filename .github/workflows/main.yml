@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps: #what we're going to be doing
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2. #allows access to your code
+      - uses: actions/checkout@v2 #allows access to your code
 
       # Runs a set of commands using the runners shell
       - name: Compile and run our JUnit tests, also test out echo
