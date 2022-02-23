@@ -1,11 +1,6 @@
+# Title
 
-//giving empty brace for the one below []
-[another link!]some-page.html)
+[a link!](https://something.com)
+[another link!](some-page.html)
 
-//giving empty brace for the one below []
-another link!](some-page.html)
-
-//gives [] when empty 
-
-//another link!]some-page.html)
-this also returns [] 
+some paragraph text after the links

@@ -10,12 +10,12 @@ public class GradingTests {
     @Test
     public void testFile1() {
         List<String> expect = List.of("");
-        assertEquals(MarkdownParse.getLinks("[]()"), expect);
+        assertEquals(MarkdownParse1.getLinks("[]()"), expect);
     }
     @Test
     public void testFile2() {
         List<String> expect = List.of();
-        assertEquals(MarkdownParse.getLinks("[]("), expect);
+        assertEquals(MarkdownParse1.getLinks("[]("), expect);
     }
 
 }
